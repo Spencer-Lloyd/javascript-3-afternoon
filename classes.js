@@ -30,6 +30,20 @@
 */
 
 //Code Here
+class Employee {
+  constructor (first_name, last_name, email, age){
+    this.first_name = first_name;
+    this.last_name = last_name;
+    this.email = email;
+    this.age = age;
+    this.makeWidget = function() {
+      return first_name + ' ' + last_name + ' Widget';
+    }
+  }
+  // function makeWidget() {
+  //   return first_name + ' ' + last_name + 'Widget';
+  // } each employee needs to have the sentence not just the class/object thing
+}
 
 
 
@@ -50,8 +64,26 @@
 */
 
 //Code Here
-
-
+class Manager{
+  constructor (first_name, last_name, email, age){
+    this.first_name = first_name;
+    this.last_name = last_name;
+    this.email = email;
+    this.age = age;
+    this.makeWidget = function() {
+      return first_name + ' ' + last_name + ' Widget';
+    }
+    this.reports = [];
+    this.hire = function(employee) {
+      this.reports.push(employee);
+    }
+    this.fire = function(employee) {
+      if(this.reports.indexOf(employee)){
+        this.reports.splice(employee,1);
+      }
+    }
+  }
+}
 
 ////////// PROBLEM 3 //////////
 
